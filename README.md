@@ -9,6 +9,18 @@ library(devtools)
 install_github("matthewwiese/zig-r-example")
 ```
 
+## **NOTE**
+
+If you encounter `/bin/bash: zig: command not found` when using the installation method above, please read this section.
+
+Unlike R invoked from the terminal, RStudio does not get its PATH information from your shell, but from system-wide settings. Prepend to RStudio's PATH the directory containing your `zig` executable; use the following command as guidance:
+
+```R
+Sys.setenv(PATH=paste("/path/to/zig:", Sys.getenv("PATH"), sep=""))
+```
+
+For more information, see [this StackOverflow](https://stackoverflow.com/a/31121904) answer.
+
 ## Development
 ### Requirements
 
