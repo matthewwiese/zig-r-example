@@ -1,2 +1,8 @@
-# A bit convoluted... is there a better way?
-PKG_LIBS =  $(shell ../inst/build.sh)
+#ZIG_SOURCES := $(shell find . -name '*.zig')
+#ZIG_OBJECTS = $(addsuffix .o,$(basename $(ZIG_SOURCES)))
+ZIG_CFLAGS = -I/usr/share/R/include -lc -fcompiler-rt -fPIC
+
+#$(ZIG_OBJECTS): $(ZIG_SOURCES)
+main.o: main.zig
+	zig build-obj $(ZIG_CFLAGS) main.zig
+	gcc -std=gnu99 -shared -L/usr/lib64/R/lib -Wl,-Bsymbolic-functions -Wl,-z,relro -o zigrexample.so main.o -L/usr/lib64/R/lib -lR

@@ -1,2 +1,2 @@
-#' @useDynLib zigrexample iota_
-iota <- function(n) .Call(iota_, n)
+iota   <- function(n) .Call(iota_,   n)
+square <- function(n) .Call(square_, n)

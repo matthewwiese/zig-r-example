@@ -1,3 +1,4 @@
-useDynLib(zigrexample, iota_)
+useDynLib(zigrexample, iota_, square_)
 
 export(iota)
+export(square)
