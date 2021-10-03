@@ -1,0 +1,2 @@
+# A bit convoluted... is there a better way?
+PKG_LIBS =  $(shell ../inst/build.sh)

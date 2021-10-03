@@ -1,0 +1,10 @@
+Package: zigrexample
+Version: 0.1
+Date: 2021-10-03
+Title: Example R Package using Zig
+Author: Matt Wiese [aut, cre]
+Maintainer: Matt Wiese <cran@mattwie.se>
+Depends: R (>= 3.0.0)
+SystemRequirements: Zig (https://ziglang.org/)
+Description: Example package that illustrates calling Zig from R.
+License: ISC

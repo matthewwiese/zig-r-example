@@ -1,0 +1,3 @@
+useDynLib(zigrexample, iota_)
+
+export(iota)
