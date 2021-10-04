@@ -7,7 +7,7 @@ const R = @cImport({
 export fn iota_(n: R.SEXP) R.SEXP {
     var n_int: i64 = R.asInteger(n);
     var result: R.SEXP = R.PROTECT(R.allocVector(R.INTSXP, n_int));
-    var i: usize = 0;
+    var i: c_uint = 0;
     var c: c_int = 1;
     while (i < n_int) {
         R.INTEGER(result)[i] = c;
